@@ -2,7 +2,7 @@
 /node_modules/*
 /bridge/*
 /plugins/*
-bt.dat
-node.dll
-server.exe
-.idea
+/bt.dat
+/node.dll
+/server.exe
+/.idea/*
