@@ -1,1 +1,1 @@
-require("./prototype/index.js");
+require("prototype/index.js");

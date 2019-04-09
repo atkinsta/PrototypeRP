@@ -1,4 +1,4 @@
-import "../styles/main.scss"
+import "./styles/main.scss"
 
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
@@ -13,7 +13,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log("It mounted");
         EventManager.addHandler('onMessage', this.onMessage.bind(this));
         this.timerId = setInterval(() => {
             this.setState({time: new Date()});

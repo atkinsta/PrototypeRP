@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 
 let NODE_ENV = 'production';
 if (process.env.NODE_ENV) {
@@ -9,7 +10,7 @@ if (process.env.NODE_ENV) {
 module.exports = {
     entry: {
         index: './reactUI/index.js',
-        app: './reactUI/main/js/app.js'
+        app: './reactUI/app.js'
     },
     output: {
         path: path.resolve(__dirname, 'client_packages/prototype'),
@@ -39,6 +40,11 @@ module.exports = {
     },
     mode: NODE_ENV,
     plugins: [
-        new webpack.EnvironmentPlugin('NODE_ENV')
+        new webpack.EnvironmentPlugin('NODE_ENV'),
+        new CopyPlugin([
+            {from: "reactUI/index.html", to: "."},
+            {from: "reactUI/configs/", to: "configs/"},
+            {from: "reactUI/main/", to: "main/"}
+        ])
     ]
 };
