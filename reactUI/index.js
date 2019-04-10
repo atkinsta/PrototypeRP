@@ -17,10 +17,16 @@ mp.events.add('showUrl', (url) => {
 
 mp.events.add("pushCords", coords => {
     mp.gui.chat.push(coords);
-})
+});
+
+mp.events.add("toggleMe", value => {
+    mp.gui.chat.push(value);
+});
 
 // F12 - trigger cursor
 mp.keys.bind(0x26, true, () => {
+    console.log("please log something");
     let state = !mp.gui.cursor.visible;
     mp.gui.cursor.show(state, state);
+    browser.execute("trigger('onKeyPress')");
 });
