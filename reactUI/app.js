@@ -3,6 +3,17 @@ import "./styles/main.scss"
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
+const styles = {
+    position: "relative",
+    width: "30%",
+    height: "40vh",
+    margin: "20vh auto",
+    borderRadius: "10px",
+    boxShadow: "1px 1px 2px black",
+    backgroundColor: "black",
+    color: "white"
+};
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -55,13 +66,8 @@ class App extends Component {
 
     render() {
         return(
-            <div className="app" style={this.state.show ? {display:"block"} : {display:"none"}}>
-                <h1> Vehicle spawns </h1>
-                <p className="current-time">{this.state.time.toLocaleTimeString()}</p>
-                {this.state.carSpawns.map(spawn => {
-                    return <p style={{color: "red"}}>{spawn}</p>
-                })}
-                <button className="send-button" onClick={this.click}>Send</button>
+            <div style={this.styles}>
+                <img src={"./assets/Phone.jpg"} alt={"A phone"}/>
             </div>
         )
     }

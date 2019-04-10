@@ -44,7 +44,8 @@ module.exports = {
         new CopyPlugin([
             {from: "reactUI/index.html", to: "."},
             {from: "reactUI/configs/", to: "configs/"},
-            {from: "reactUI/main/", to: "main/"}
+            {from: "reactUI/main/", to: "main/"},
+            {from: "reactUI/assets", to: "assets/"}
         ])
     ]
 };

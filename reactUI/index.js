@@ -1,6 +1,7 @@
 let browser;
 
-const triggerFormatter = (eventName, value) => `trigger('${eventName}', '${value}')`;
+//Trigger formatter, I learned my lesson trying to type those out manually
+const tf = (eventName, value) => `trigger('${eventName}', '${value}')`;
 
 mp.events.add('guiReady', () => {
     if (!browser) {
@@ -10,7 +11,7 @@ mp.events.add('guiReady', () => {
 
 // Handle event from server and send data to react app
 mp.events.add('onMessageFromServer', (value) => {
-    browser.execute(triggerFormatter("onMessage", value));
+    browser.execute(tf("onMessage", value));
 });
 
 // Handle event from react app
@@ -24,7 +25,7 @@ mp.events.add("toggleMe", value => {
 
 mp.events.add("carSpawnAdded", position => {
     mp.gui.chat.push(position);
-    browser.execute(triggerFormatter("carSpawnAdded", position));
+    browser.execute(tf("carSpawnAdded", position));
 });
 
 mp.events.add("displaySpawns", position => {
