@@ -9,6 +9,7 @@ class App extends Component {
         this.state = {
             time: new Date(),
             message: 'default message',
+            carSpawns: ["0, 1, 3"],
             show: false
         }
     }
@@ -16,6 +17,7 @@ class App extends Component {
     componentDidMount() {
         EventManager.addHandler('onMessage', this.onMessage.bind(this));
         EventManager.addHandler("onKeyPress", this.onKeyPress.bind(this));
+        EventManager.addHandler("carSpawnAdded", this.carSpawnAdded.bind(this));
         this.timerId = setInterval(() => {
             this.setState({time: new Date()});
         }, 1000);
@@ -23,6 +25,7 @@ class App extends Component {
 
     componentWillUnmount() {
         clearInterval(this.timerId);
+        EventManager.removeHandler("carSpawnAdded", this.carSpawnAdded);
         EventManager.removeHandler('onMessage', this.onMessage);
         EventManager.removeHandler("onKeyPress", this.onKeyPress);
     }
@@ -35,18 +38,29 @@ class App extends Component {
         this.setState({show: !this.state.show});
     }
 
+    carSpawnAdded(position) {
+        this.setState({carSpawns: [...this.state.carSpawns, position]});
+        let retPos = position;
+        mp.trigger("displaySpawns", retPos);
+    }
+
     // send current url to client
      click() {
         let currentUrl = window.location.pathname;
         mp.trigger("showUrl", currentUrl);
+        this.state.carSpawns.forEach(spawn => {
+            mp.trigger("displaySpawns", spawn);
+        })
     }
 
     render() {
         return(
             <div className="app" style={this.state.show ? {display:"block"} : {display:"none"}}>
-                <h1>Make UI on React!</h1>
+                <h1> Vehicle spawns </h1>
                 <p className="current-time">{this.state.time.toLocaleTimeString()}</p>
-                <p className="message">{this.state.message}</p>
+                {this.state.carSpawns.map(spawn => {
+                    return <p style={{color: "red"}}>{spawn}</p>
+                })}
                 <button className="send-button" onClick={this.click}>Send</button>
             </div>
         )
