@@ -13,9 +13,7 @@ class Phone extends Component {
     }
 
     componentDidMount() {
-        EventManager.addHandler('onMessage', this.onMessage.bind(this));
         EventManager.addHandler("onKeyPress", this.onKeyPress.bind(this));
-        EventManager.addHandler("carSpawnAdded", this.carSpawnAdded.bind(this));
         this.timerId = setInterval(() => {
             this.setState({time: new Date()});
         }, 1000);
@@ -23,36 +21,17 @@ class Phone extends Component {
 
     componentWillUnmount() {
         clearInterval(this.timerId);
-        EventManager.removeHandler("carSpawnAdded", this.carSpawnAdded);
-        EventManager.removeHandler('onMessage', this.onMessage);
         EventManager.removeHandler("onKeyPress", this.onKeyPress);
-    }
-
-    onMessage(value) {
-        this.setState({message: value})
     }
 
     onKeyPress() {
         this.setState({show: !this.state.show});
     }
 
-    carSpawnAdded(position) {
-        this.setState({carSpawns: [...this.state.carSpawns, position]});
-        mp.trigger("displaySpawns", position);
-    }
-
-    // send current url to client
-    click() {
-        let currentUrl = window.location.pathname;
-        mp.trigger("showUrl", currentUrl);
-        this.state.carSpawns.forEach(spawn => {
-            mp.trigger("displaySpawns", spawn);
-        })
-    }
     render() {
         return(
-            <div className={"app"}>
-                <img className={"phoneImg"} src={"./assets/Phone.png"} alt={"A phone"} style={{maxHeight: "100%", maxWidth:"100%"}}/>
+            <div className={"phone"} style={this.state.show ? {bottom: 0, transition: "bottom 500ms"} : {bottom: -1000, transition: "bottom 400ms"}}>
+                <img className={"phoneImg"} src={"./assets/Phone.png"} alt={"A phone"}/>
                 <div className={"phoneHome"}>
 
                 </div>

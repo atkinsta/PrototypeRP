@@ -14,27 +14,30 @@ mp.events.add('onMessageFromServer', (value) => {
     browser.execute(tf("onMessage", value));
 });
 
-// Handle event from react app
-mp.events.add('showUrl', (url) => {
-    mp.gui.chat.push(url);
+const dashLoop = {
+    loop: null,
+    startLoop: (vehicle) => {
+        dashLoop.loop = setInterval(() => {
+            browser.execute(tf("onSpeedChange", Math.round(vehicle.getSpeed() * 2.33)));
+        }, 16.666);
+    },
+    stopLoop: () => {
+        clearInterval(dashLoop.loop);
+    }
+};
+
+mp.events.add("renderDash", () => {
+    let veh = mp.players.local.vehicle;
+    browser.execute(tf("renderDash", true));
+    dashLoop.startLoop(veh)
 });
 
-mp.events.add("toggleMe", value => {
-    mp.gui.chat.push(value);
+mp.events.add("removeDash", () => {
+    dashLoop.stopLoop();
+    browser.execute(tf("hideDash", false))
 });
 
-mp.events.add("carSpawnAdded", position => {
-    mp.gui.chat.push(position);
-    browser.execute(tf("carSpawnAdded", position));
-});
-
-mp.events.add("displaySpawns", position => {
-    mp.gui.chat.push(position);
-});
-
-// F12 - trigger cursor
 mp.keys.bind(0x26, true, () => {
-    console.log("please log something");
     let state = !mp.gui.cursor.visible;
     mp.gui.cursor.show(state, state);
     browser.execute("trigger('onKeyPress')");
