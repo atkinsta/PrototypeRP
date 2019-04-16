@@ -20,5 +20,5 @@ const blips = [
                 color: blip.color,
                 shortRange: true
             });
-    })
+        })
 };

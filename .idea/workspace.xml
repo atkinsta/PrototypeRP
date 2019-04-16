@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe9f7077-1161-4df5-8b98-1a0c82360c10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/AppBase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/AppContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/Console.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/OpenContacts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/PhoneApps/Calls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/PhoneApps/Contacts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/functional/Engine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/functional/PhoneHome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/functional/Speed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/components/functional/TopBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/main/blipInit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactUI/main/dealershipInit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_packages/.listcache" beforeDir="false" afterPath="$PROJECT_DIR$/client_packages/.listcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_packages/prototype/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client_packages/prototype/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_packages/prototype/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client_packages/prototype/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_packages/prototype/main/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/client_packages/prototype/main/events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/prototype/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/prototype/commands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/prototype/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/prototype/events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactUI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactUI/components/Dash.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/components/Dash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactUI/components/Phone.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/components/Phone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactUI/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactUI/main/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/main/events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactUI/styles/dash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/styles/dash.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactUI/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactUI/main/blipInit.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactUI/main/blipInit.js" afterDir="false" />
     </list>
     <ignored path="C:\RAGEMP\server-files\client_packages\prototype/" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -270,12 +245,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555211926932</updated>
-      <workItem from="1555211929921" duration="16034000" />
+      <workItem from="1555211929921" duration="17670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16034000" />
+    <option name="totallyTimeSpent" value="17670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -292,11 +267,11 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.08825847" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08786446" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49960598" weight="0.32856005" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49960598" visible="true" weight="0.32856005" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.500394" side_tool="true" weight="0.32856005" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293556" />
