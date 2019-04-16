@@ -1,7 +1,6 @@
 @mixin animation($target) {
     -webkit-transform: translateY($target);
 }
-
 .main {
     width: 100%;
     height: 100%;
@@ -10,6 +9,50 @@
     left: 0;
 }
 
+.console {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.appContainer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+    height: 40%;
+    margin: 2% 5%;
+    background: none;
+    color: white;
+    z-index: 0;
+
+    .phoneApp {
+        position: relative;
+        float: left;
+        width: 25%;
+        height: 12%;
+        background-color: aqua;
+        margin: 5% 0 5% 7%;
+        border-radius: 15%;
+        z-index: 6;
+
+        .appLabel {
+            position: absolute;
+            text-align: center;
+            bottom: -23%;
+            margin: 0 auto;
+        }
+
+        .openApp {
+            z-index: 7;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
 
 .phone {
     h1 {
@@ -46,10 +89,39 @@
         top: 1%;
         left: 1%;
         background-color: orange;
-        height: 98%;
+        height: 95%;
         width: 96%;
         z-index: 1;
-        border-radius: 10%;
+        border-radius: 9%;
+
+        .topBar {
+            position: absolute;
+            height: 8%;
+            width: 100%;
+            background-color: rgba(240, 255, 255, 0.45);
+            border-radius: 10%;
+            z-index: 2;
+
+            .currTime {
+                position: absolute;
+                left: 10%;
+                bottom: 0;
+            }
+
+            .signal {
+                position: absolute;
+                max-height: 40%;
+                right: 30%;
+                bottom: 0;
+            }
+
+            .battery {
+                max-height: 35%;
+                position: absolute;
+                right: 10%;
+                bottom: 0;
+            }
+        }
     }
 
     position: absolute;

@@ -1,12 +1,32 @@
 .dash {
   .speed {
-    font-size: 4em;
+    font-size: 3.8em;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: black;
+  }
+
+  .mph {
+    font-size: 1.8em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: black;
+
+  }
+
+  .engineState {
+    position: absolute;
+    max-height: 50%;
+    top: 0;
+    right: 0;
   }
 
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 2% 12%;
+  margin: 1% 16.5%;
   width: 10%;
   height: auto;
 }
